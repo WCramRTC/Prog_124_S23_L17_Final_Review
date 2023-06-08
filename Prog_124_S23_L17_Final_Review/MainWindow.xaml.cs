@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Prog_124_S23_L17_GymClassLibrary;
+
 
 namespace Prog_124_S23_L17_Final_Review
 {
@@ -20,9 +22,63 @@ namespace Prog_124_S23_L17_Final_Review
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        List<Account> _members = new List<Account>();
+
         public MainWindow()
         {
             InitializeComponent();
+            Preload();
+            lbDebug.ItemsSource = _members;
+        } // MainWindow()
+
+        public void Preload()
+        {
+            _members.Add(new Account("Josh", "Emery", "jemery@rtc.edu", "jem"));
+            _members.Add(new Account("Will", "Cram", "wcram@rtc.edu", "wcram"));
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+
+            string email = txtEmail.Text;
+            string password = txtPassword.Text;
+
+            if(IsValidUser(email, password))
+            {
+                new Workouts().Show();
+            }
+            else
+            {
+                MessageBox.Show("Please Enter a valid email or password");
+            }
+
+
+        } // 
+
+        public bool IsValidUser(string email, string password)
+        {
+
+            // Linear search - loops through an entire list
+            // checks if the current value equals our SEARCH value
+            // Responds if true or false
+
+            foreach (Account account in _members)
+            {
+                if(email == account.Email && password == account.Password)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void lbDebug_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Account selected = (Account)lbDebug.SelectedItem;
+
+            txtEmail.Text = selected.Email;
+            txtPassword.Text = selected.Password;
 
         }
     }

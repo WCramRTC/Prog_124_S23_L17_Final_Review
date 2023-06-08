@@ -7,4 +7,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Prog_124_S23_L17_GymClassLibrary\Prog_124_S23_L17_GymClassLibrary.csproj" />
+  </ItemGroup>
+
 </Project>

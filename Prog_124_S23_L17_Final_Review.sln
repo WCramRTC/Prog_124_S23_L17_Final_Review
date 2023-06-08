@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33402.96
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prog_124_S23_L17_Final_Review", "Prog_124_S23_L17_Final_Review\Prog_124_S23_L17_Final_Review.csproj", "{0949DE4B-34BB-4AEF-AF32-BBE88D5429C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prog_124_S23_L17_GymClassLibrary", "Prog_124_S23_L17_GymClassLibrary\Prog_124_S23_L17_GymClassLibrary.csproj", "{72D1B14B-8889-4C36-8D2D-82C1C52E77B1}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0949DE4B-34BB-4AEF-AF32-BBE88D5429C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0949DE4B-34BB-4AEF-AF32-BBE88D5429C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0949DE4B-34BB-4AEF-AF32-BBE88D5429C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0949DE4B-34BB-4AEF-AF32-BBE88D5429C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72D1B14B-8889-4C36-8D2D-82C1C52E77B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72D1B14B-8889-4C36-8D2D-82C1C52E77B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72D1B14B-8889-4C36-8D2D-82C1C52E77B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72D1B14B-8889-4C36-8D2D-82C1C52E77B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
