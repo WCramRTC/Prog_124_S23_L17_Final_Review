@@ -28,15 +28,12 @@ namespace Prog_124_S23_L17_Final_Review
         public MainWindow()
         {
             InitializeComponent();
-            Preload();
+            _members = Data.Accounts;
+
             lbDebug.ItemsSource = _members;
         } // MainWindow()
 
-        public void Preload()
-        {
-            _members.Add(new Account("Josh", "Emery", "jemery@rtc.edu", "jem"));
-            _members.Add(new Account("Will", "Cram", "wcram@rtc.edu", "wcram"));
-        }
+ 
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
@@ -46,6 +43,16 @@ namespace Prog_124_S23_L17_Final_Review
 
             if(IsValidUser(email, password))
             {
+                foreach (Account account in _members)
+                {
+                    if(email == account.Email)
+                    {
+                        Data._currentAccount = account;
+                    }
+                }
+
+                MessageBox.Show(Data._currentAccount.Email);
+
                 new Workouts().Show();
             }
             else

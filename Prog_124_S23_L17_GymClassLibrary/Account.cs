@@ -10,7 +10,7 @@
         string _location; // optional
         string _email;
         string _password;
-
+        string _fileLocation;
 
         public Account() { }
 

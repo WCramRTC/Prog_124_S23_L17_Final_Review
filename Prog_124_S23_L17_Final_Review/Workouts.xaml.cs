@@ -1,6 +1,7 @@
 ﻿using Prog_124_S23_L17_GymClassLibrary;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,10 +28,19 @@ namespace Prog_124_S23_L17_Final_Review
             InitializeComponent();
             Preload();
 
+            CreateNewFile(Data.UsersExercises());
+
             lvExercises.ItemsSource = _exercise;
 
         } // Workouts
-        
+
+        private void CreateNewFile(string filePath) // Used to create a file on load to guarantee a file exists. Use on page load.
+        {
+            FileStream tryout = File.OpenWrite(filePath);
+            tryout.Close();
+            tryout.Dispose();
+        }
+
         public void Preload()
         {
             _exercise.Add(new Exercise("Run", 1000));
